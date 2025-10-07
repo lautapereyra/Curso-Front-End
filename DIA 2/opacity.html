@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #container{
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        #container:hover img{
+        opacity: 1;
+        }
+        #container:hover p{
+            color: red;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            opacity: 0.4;
+            filter:Alpha(opacity=50);
+        }
+        
+        p{
+            color: #fff;
+            position: absolute;
+            text-align: center;
+            width: 300px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+       <img src=".//img/82f6972df4a341a6cfd3d412ad31b789.lpg.png" alt="">
+       <p>Relleno</p>
+    </div>
+</body>
+</html>
