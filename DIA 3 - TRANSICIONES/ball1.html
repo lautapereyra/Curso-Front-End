@@ -26,10 +26,14 @@
             position: absolute;
             left: 0;
             top:0;
+/*
             transition-property: left;
             transition-duration: 3s;
             transition-timing-function: ease-in-out;
             transition-delay:1s;
+*/
+
+            transition: left 2s linear, top 2s linear;
         }
         .ball img{
             width: 100%;
@@ -38,6 +42,8 @@
         
         .ball:hover{
             left: 500px;
+            top:500px;
+            
         }
         .ball-container:hover .ball{
             left:500px;
