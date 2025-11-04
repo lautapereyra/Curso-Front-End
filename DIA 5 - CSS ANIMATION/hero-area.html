@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Aarea Project</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #111;
+            color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: bg 4s linear infinite;
+            overflow: hidden;
+        }
+
+        @keyframes bg {
+            0%, 100% {
+                background-color: rgba( 0, 0, 0, 0.4);
+            }
+
+            25% {
+                background-color:rgb(190, 0, 0, 0.4);
+            }
+
+            50% {
+                background-color: rgba(1, 94, 1, 0.4);
+            }
+
+            75% {
+                background-color: rgb(0, 0, 219, 0.4);
+            }
+        }
+        .slider-container h1{
+            margin-bottom: 10px;
+            font-size: 64px;
+            font-weight: bolder;
+        }
+        .slider-container{
+            padding: 50px;
+            background-color: rgb(0, 0, 0, 0.6);
+            border-radius: 6px;
+            border: 1px solid white;
+            top:110px;
+            
+        }
+        .slider-container p{
+            font-size: 18px;
+            
+        }
+        .cta{
+            margin-top: 40px;
+            padding:15px 64px;
+            border: 1px solid white;
+            display: inline-block;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor:pointer;
+            width: 110px;
+            transition-property: all;
+            transition-duration:  320ms;
+            box-shadow:  0 0 10px #fff;
+        }
+        .cta:hover {
+            text-shadow: 0 0 3px rgb(215, 255, 215);
+            box-shadow: 0 0 20px rgb(253, 253, 253);
+            border: 1px solid #f1f1f1;
+            color: white;
+            width: 130px;
+            
+        }
+        .slider video {
+            position: absolute;
+            top:0;
+            left:0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        .cta:hover{
+            border-color: #ffffff;
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <video muted autoplay loop>
+            <source src=".//video/video coso.mp4" type="video/mp4">
+        </video>
+        <div class="slider-container">
+            <h1>We are Web Developers</h1>
+            <p>We just love to develop websites and while doing that we need some cofee</p>
+            <div class="cta">Contact Us</div>
+        </div>
+    </div>
+</body>
+
+</html>
