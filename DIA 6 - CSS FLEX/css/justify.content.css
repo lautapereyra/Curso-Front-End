@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    background-color: orange;
+    width: 800px;
+    height: 500px;
+    justify-content:space-around;
+}   
+
+.item {
+    background: #ddd;
+    margin: 10px ;
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    height: 800px;
+    background-color: orange;
+    flex-direction: column-reverse;
+}
+
+.item {
+    background: #ddd;
+    margin: 20px ;
+    width: 100px;
+    height: 100px;
+}

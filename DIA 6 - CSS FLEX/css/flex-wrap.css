@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    background-color: orange;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: #ddd;
+    margin: 20px ;
+    width: 100px;
+    height: 100px;
+}

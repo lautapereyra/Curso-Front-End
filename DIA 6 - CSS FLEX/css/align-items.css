@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    background-color: orange;
+    width: 800px;
+    height: 500px;
+    justify-content:center;
+    align-items: center;
+}   
+
+.item {
+    display: flex;
+    background: #ddd;
+    margin: 10px ;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content:center;
+}
