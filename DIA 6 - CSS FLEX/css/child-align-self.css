@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 800px;
+    background-color: orange;
+}
+
+.item {
+    display: flex;
+    background: #ddd;
+    margin: 20px ;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.item1{
+    background:red;
+    align-self: flex-start;
+}
+.item2{
+    background:green;
+    align-self: center;
+}
+  
+.item3{
+    background:blue;
+    align-self: flex-end;
+}
