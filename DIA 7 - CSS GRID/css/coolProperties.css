@@ -1,0 +1,33 @@
+.container{
+    display: grid;
+    background: #333;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 50px;
+    height: 900px;
+    width: 900px;
+}
+
+.item{
+    background:orange;
+    color: #fff;
+    padding: 50px;
+    font-size: 30px;
+}
+
+.item1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background:red;
+}
+
+.item2{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background:blue;
+}
+

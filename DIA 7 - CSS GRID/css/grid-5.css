@@ -1,0 +1,18 @@
+.container{
+    display: grid;
+    
+    background: #333;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 50px;
+    height: 900px;
+    justify-items: center;
+    align-content: center; 
+}
+
+.item{
+    background:orange;
+    color: #fff;
+    padding: 50px;
+    font-size: 30px;
+}

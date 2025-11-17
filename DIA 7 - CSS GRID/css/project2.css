@@ -1,0 +1,47 @@
+.container{
+    display: grid;
+    background: #333;
+    grid-template-areas:
+        "header header header"
+        "sidebar content1 content2"
+        "sidebar content3 content4"
+        "footer footer footer";
+    grid-gap: 50px;
+}
+
+.item{
+    align-content: center;
+    text-align: center;
+    padding: 40px;
+    background-color: orange;
+    color: #fff;
+    font-size: 30px;
+}
+
+.header{
+    grid-area: header;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.content1{
+    grid-area: content1;
+}
+
+.content2{
+    grid-area: content2;
+}
+
+.content3{
+    grid-area: content3;
+}
+
+.content4{
+    grid-area: content4;
+}
+
+.footer{
+    grid-area: footer;
+}
