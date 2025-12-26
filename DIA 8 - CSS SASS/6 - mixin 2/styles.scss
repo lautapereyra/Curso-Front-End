@@ -1,0 +1,44 @@
+$color: #fff;
+$bg-color: #111;
+
+@import 'mixins';
+
+body {
+    font-family: sans-serif;
+    font-size: 30px;
+    background: $bg-color;
+    color: $color;
+
+}
+
+.container {
+    width: 100%;
+
+    .section {
+        @include centerItems;
+        background-color: #111;
+        &-content {
+            font-weight: bold;
+            h1{
+                @include gradientText(to right, rgb(9, 197, 41), rgb(189, 155, 3));
+            }
+            p {
+                a {
+                    @include button (to bottom right , red, blue);
+                }
+            }
+        }
+    }
+    .section1 {
+        @extend .section;
+        background-color: #eeeeee;
+        h1{
+            @include gradientText(to right, rgb(197, 15, 9), rgb(152, 3, 189));
+        }
+        p {
+                a {
+                    @include button (to bottom right , rgb(211, 137, 26), rgb(176, 93, 224));
+                }
+            }
+    }
+}

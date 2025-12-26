@@ -1,0 +1,35 @@
+$color: #fff;
+$bg-color: #111;
+
+@import 'mixins';
+
+body {
+    font-family: sans-serif;
+    font-size: 30px;
+    background: $bg-color;
+    color: $color;
+
+}
+
+.container {
+    width: 100%;
+
+    .section {
+        @include centerItems;
+
+        &-content {
+            font-weight: bold;
+            h1{
+                @include gradientText;
+            }
+            p {
+                a {
+                    @include button;
+                }
+            }
+        }
+    }
+    .section1 {
+        @extend .section;
+    }
+}
