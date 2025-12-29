@@ -1,0 +1,40 @@
+@mixin background($dolor1, $color2){
+    background:linear-gradient(to bottom right, $dolor1, $color2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    .triangle{
+        width: 300px;
+        height: 300px;
+        @include background(red, blue);
+        clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    .hexagon{
+        width: 300px;
+        height: 300px;
+        @include background(purple, orange);
+        clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    .circle{
+        width: 300px;
+        height: 300px;
+        @include background(blue, green);
+        border-radius: 50%;
+    }
+    .book{
+        width: 300px;
+        height: 300px;
+        @include background(yellow, red);
+        clip-path:polygon(0% 0%, 50% 30%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+    }
+}

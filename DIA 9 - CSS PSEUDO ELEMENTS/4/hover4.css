@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes right {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes border {
+  0% {
+    border-color: white;
+  }
+  50% {
+    border-color: orangered;
+  }
+  100% {
+    border-color: green;
+  }
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fff;
+}
+.container .button {
+  padding: 15px 60px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  z-index: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  position: relative;
+}
+.container .button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: orangered;
+  top: 0;
+  left: -100%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.container .button:hover::before {
+  left: 0;
+}
+.container .button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: green;
+  top: 0;
+  right: -100%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.container .button:hover::after {
+  animation: right 0.5s linear 0.5s forwards;
+}
+.container .button:hover {
+  border-color: orange;
+  animation: border 1s linear;
+  border-color: green;
+}/*# sourceMappingURL=hover4.css.map */

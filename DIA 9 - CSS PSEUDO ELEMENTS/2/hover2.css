@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #111;
+}
+.container button {
+  padding: 15px 60px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(to bottom right, red, blue);
+  border-radius: 20px;
+  border-width: 0;
+  color: #fff;
+  position: relative;
+}
+.container button::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, rgb(0, 119, 255), rgb(5, 214, 117));
+  top: -10px;
+  left: -10px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.container button::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, rgb(155, 25, 231), rgb(12, 126, 219));
+  bottom: -10px;
+  right: -10px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.container button:hover::before {
+  top: -30px;
+  left: -30px;
+  opacity: 1;
+  animation: anim 2s linear infinite 0.2s;
+}
+.container button:hover::after {
+  bottom: -30px;
+  right: -30px;
+  opacity: 1;
+  animation: anim 2s linear infinite 0.5s;
+}/*# sourceMappingURL=hover2.css.map */
