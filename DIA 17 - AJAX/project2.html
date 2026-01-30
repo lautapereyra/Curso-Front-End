@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--<<button id="click" onclick="retrive()">Click Me</button>>-->
+    <input type="text" id="name" onkeyup="retrive()">
+    <div id="result"></div>
+    <script type="text/javascript">
+
+        function retrive() {
+            var xhr;
+            var name = document.getElementById("name").value;
+            var length = name.length;
+            if (length == 0) {
+                document.getElementById('result').innerHTML = "";
+            }
+            else {
+                if (window.ActiveXObject) {
+                    try {
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP")
+                    } catch (e) {
+                        alert('error');
+                    }
+                }
+                else if (whindow.XMLHttpRequest) {
+                    try {
+                        xhr = new XMLHttpRequest();
+                    } catch (e) {
+                        alert('error');
+                    }
+                }
+                xhr.onreadystatechange = function () {
+                    if (readyState == 4 && status == 200) {
+                        document.getElementById('result').innerHTML = this.responseText;
+                    }
+                }
+                xhr.open("GET", "dynamic.php?name=" + name, true);
+                xhr.send();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

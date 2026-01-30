@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var xhr;
+        if (window.ActiveXObject) {
+            try {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP")
+            } catch (e) {
+                alert('error');
+            }
+        }
+        else if (whindow.XMLHttpRequest) {
+            try {
+                xhr = new XMLHttpRequest();
+            } catch (e) {
+                alert('error');
+            }
+        }
+
+        /* COMO CREAR EL REQUEST /OPEN, SEND/*/
+        // get puede ser get o post - TRUE para que sea asincronico y FALSE para que sea sincronico
+
+        var value = "best";
+
+        //normal request code using get method
+        xhr.open("GET", "me.txt", true);
+        xhr.send();
+
+        var param = "fname=Lautaro&lname=Pereyra"
+
+        //advanced
+        xhr.open("GET", "me.txt?name=" + value, true);
+        xhr.send();
+
+        /* COMO CREAR EL REQUEST USANDO POST METHOD*/
+
+        //normal post method
+        xhr.open("POST", "me.txt", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send();
+
+        //advanced post method
+        xhr.open("POST", "me.txt", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        xhr.send(param);
+
+        // NUNCA USAR TODAS A LA VEZ
+        </script>
+</body>
+
+</html>

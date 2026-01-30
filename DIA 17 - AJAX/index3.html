@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        var xhr;
+        if (window.ActiveXObject) {
+            try {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP")
+            } catch (e) {
+                alert('error');
+            }
+        }
+        else if (whindow.XMLHttpRequest) {
+            try {
+                xhr = new XMLHttpRequest();
+            } catch (e) {
+                alert('error');
+            }
+        }
+
+        /* COMO CREAR EL REQUEST /OPEN, SEND/*/
+        // get puede ser get o post - TRUE para que sea asincronico y FALSE para que sea sincronico
+
+        var value = "best";
+
+        //normal request code using get method
+
+        xhr.onreadystatechange = function () {
+            if (readyState == 4 && status == 200) {
+                document.getElementById('result').innerHTML = this.responseText;
+            }
+        }
+
+
+        /*readyState = 0 - request not initialized
+        readyState = 1 - server connection established
+        readyState = 2 - received
+        readyState = 3 - server procesing the request
+        readyState = 4 - request finished and response got ready
+        
+        status = 200 - OK
+        status = 404 - not found
+        status = 403 - forbidden*/
+
+        xhr.open("GET", "me.txt", true);
+        xhr.send();
+
+
+
+
+    </script>
+</body>
+
+</html>
