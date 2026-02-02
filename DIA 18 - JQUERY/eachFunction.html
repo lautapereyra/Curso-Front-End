@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+
+    <p>I am para 1</p>
+    <p>I am para 2</p>
+    <p>I am para 3</p>
+    <p>I am para 4</p>
+    <button id="click">Click me</button>
+
+    <script type="text/javascript">
+
+        $('#click').click(function () {
+            $('p').each(function () {
+                alert($(this).html());
+            });
+        });
+    </script>
+</body>
+
+</html>

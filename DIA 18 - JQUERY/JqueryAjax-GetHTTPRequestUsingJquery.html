@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Name" />
+    <button id="button">Submit</button>
+    <div class="response"></div>
+    <script type="text/javascript">
+        //get
+        $('#button').click(function () {
+            var name = $('#name').val();
+            $.get('getHTTPRequest.php', { name: name }, function (response, status, xhr) {
+                $('.response').text(response);
+            });
+        });
+    </script>
+</body>
+
+</html>

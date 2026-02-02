@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+
+    <div class="outer">
+        <h1>Outer div</h1>
+        <div class="inner">
+            <h1>inner div</h1>
+            <div class="last-div">
+                <h1>I am last div</h1>
+                <p>I am first paragraph</p>
+                <p>I am second paragraph</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // ------------ /parentS
+        $('.last-div').parentsUntil('.outer').css('background-color', 'red');
+
+    </script>
+</body>
+
+</html>

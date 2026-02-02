@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        $(window).on("load", function () {
+            $("body").css("height", "2000px");
+            alert('hi');
+        });
+        $(window).on("unload", function () {
+            alert('hi, im sad');
+        });
+        $(window).on("scroll", function () {
+            alert('hi, im scrolling');
+        });
+        $(window).resize(function () {
+            alert('hi, im resizing');
+        });
+    </script>
+
+</body>
+
+</html>

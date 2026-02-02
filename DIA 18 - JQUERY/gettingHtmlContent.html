@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+
+    <style type="text/css">
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para1">I am para 1</p>
+    <p class="para2">I am para 2</p>
+    <input type="text" id="name" placeholder="First name" />
+    <img src="../DIA 4 - CSS TRANSITION/img/170707140_10620008.png" alt="">
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert($("p:nth-child(2)").html());
+            alert($("p:nth-child(2)").text());
+
+            alert($("#name").attr('placeholder'));
+            alert($("img").attr('src'));
+
+        });
+    </script>
+
+</body>
+
+</html>

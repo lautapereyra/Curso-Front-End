@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+
+    <div class="one">
+        Im div 1
+        <p>I am paragraph 1</p>
+        <div class="div2">
+            Im div 2
+            <div class="div3">
+                Im div 3
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var text1 = '<p class="text1">I am text 1</p>'; //using html method
+        var text2 = $('<p class="text2"></p>').text('I am text 2'); //using jquey
+        var text3 = document.createElement('p'); //using javascript (just create)
+
+        $('.div2').remove();
+        // $('.div2').empty();
+        $('.div2').append('<b>Im still exist inside empty method</b>');
+
+    </script>
+</body>
+
+</html>

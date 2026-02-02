@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="./jquery.js">\x3C/script>');
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+    <form>
+        <input type="text" class="name">
+        <input type="submit" value="click me" class="click-me">
+    </form>
+
+    <div class="output"></div>
+    <div class="output1"></div>
+    <div class="output2"></div>
+
+    <!-- <p >Hello World</p>
+    <h1 class="db-click">Hello World, i will be double clicked</h1> -->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //click event
+            $("p").click(function () {
+                alert('This paragraph got clicked');
+            });
+            $("h1.db-click").dblclick(function () {
+                alert('This heading got double clicked');
+            });
+            $("p").mouseenter(function () {
+                alert('mouse entered / hovered');
+            });
+            $("p").mouseleave(function () {
+                alert('im sad, mouse left');
+            });
+
+            //keyboard event
+            $(".name").keypress(function () {
+                $(".output").html($('.name').val());
+            });
+            $(".name").keydown(function () {
+                $(".output1").html($('.name').val());
+            });
+            $(".name").keyup(function () {
+                $(".output2").html($('.name').val());
+            });
+
+            //form event
+            $(".name").focus(function () {
+                $(this).css("background-color", "red");
+            });
+            $(".name").blur(function () {
+                $(this).css("background-color", "blue");
+            });
+            $(".name").change(function () {
+                alert('my value got changed');
+            });
+
+            //submit event
+            $("form").submit(function () {
+                alert('form submited');
+            });
+        });
+    </script>
+</body>
+
+</html>
