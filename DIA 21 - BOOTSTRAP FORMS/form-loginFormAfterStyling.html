@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style type="text/css">
+        body {
+            background: #111;
+            color: #ddd;
+        }
+
+        .card {
+            background: #222;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgb(255, 255, 255, 0.2);
+        }
+
+        .login-button {
+            width: 125px;
+            border-radius: 15px;
+            background-color: orangered;
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .login-button:hover {
+            width: 125px;
+            background: transparent;
+            box-shadow: 0 0 5px orangered;
+
+        }
+
+        .login-button:before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+            background: orangered;
+            content: '';
+            z-index: -1;
+            transition: all 0.3s ease;
+
+        }
+
+        .login-button:hover::before {
+            opacity: 0;
+            transform: scale(1.3);
+        }
+
+        /*input fields*/
+        input[type='text'],
+        input[type='password'],
+        input[type='text']:focus,
+        input[type='password']:focus {
+            background: transparent;
+            border-radius: 15px;
+            color: #fff;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        input[type='text']:focus,
+        input[type='password']:focus {
+            border: transparent;
+            box-shadow: none;
+            box-shadow: 0 0 5px orangered;
+
+        }
+
+        .form-check.form-switch .form-check-input {
+            background-color: #555;
+        }
+
+        .form-check.form-switch .form-check-input:checked {
+            background-color: orangered;
+            border-color: orangered;
+        }
+
+        .form-check.form-switch .form-check-input:focus {
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <form class="card w-50 px-5 mx-auto mt-5">
+                <h3 class="mt-5 mb-4 text-center">Login</h3>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control">
+                    <p class="form-text">Case Sensitive</p>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="pwd">Password</label>
+                    <input type="password" name="pwd" id="pwd" class="form-control">
+                </div>
+
+                <div class="form-check form-switch">
+                    <input type="checkbox" name="pref" id="pref" class="form-check-input">
+                    <label for="pref" class="form-check-label">Take me to Dashboard</label>
+                </div>
+                <button type="submit" class="btn btn-danger mt-4 login-button mx-auto mb-4">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

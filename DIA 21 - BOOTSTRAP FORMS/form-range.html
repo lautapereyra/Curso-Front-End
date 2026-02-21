@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style type="text/css">
+        .input-group-text {
+            color: #fff;
+            background: #e74c3c;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="row mt-5">
+            <div class="col-md-6">
+                <label class="form-label" for="fname">First Name</label>
+                <input type="text" name="fname" class="form-control" id="fname">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label" for="lname">Last Name</label>
+                <input type="text" name="lname" class="form-control" id="lname">
+            </div>
+
+            <div class="form-floating mt-4">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                <label class="" for="email">Enter your email</label>
+            </div>
+
+
+            <div class="mt-3">
+                <select class="form-select">
+                    <option selected>Your Highest Qualification</option>
+                    <option value="1">High School</option>
+                    <option value="2">Graduate</option>
+                    <option value="3">Post Graduated</option>
+                </select>
+            </div>
+            <!-- 
+            <div class="mt-3">
+                <label class="form-label">Enter Your Food Preference</label>
+                <div class="form-check">
+                    <input type="radio" name="food1" value="non-veg" class="form-check-input" id="non-veg" checked>
+                    <label class="form-check-label" for="non-veg">Non Veg</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="food1" value="veg" class="form-check-input" id="veg">
+                    <label class="form-check-label" for="veg">Veg</label>
+                </div>
+            </div>
+            -->
+            <div class="mt-5">
+                <label class="form-label">Enter Your Food Preference</label>
+                <br>
+                <div class="form-check-inline">
+                    <input type="radio" name="food2" value="non-veg" class="form-check-input" id="non-veg" checked>
+                    <label class="form-check-label" for="non-veg">Non Veg</label>
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="food2" value="veg" class="form-check-input" id="veg">
+                    <label class="form-check-label" for="veg">Veg</label>
+                </div>
+            </div>
+
+            <div class="input-group mt-4">
+                <input type="range" min="1" max="5" id="range" class="w-50" onchange="showvalue(this.value)" step="0.5">
+                <span class="input-group-text" id="rangevalue" for="range">Your Selected Value Shows Here</span>
+            </div>
+
+            <div class="input-group mt-5">
+                <span class="input-group-text" for="username">Enter your Username</span>
+                <input type="text" name="username" id="username" class="form-control">
+                <span class="input-group-text">@</span>
+                <select class="form-select">
+                    <option value="gmail" selected>Gmail</option>
+                    <option value="yahoo">Yahoo</option>
+                    <option value="outlook">Outlook</option>
+                </select>
+                <span class="input-group-text">.com</span>
+            </div>
+
+            <div class="mt-4 form-check">
+                <input type="checkbox" name="pref" id="pref" class="form-check-input">
+                <label class="form-check-label" for="pref"> Agree to uor terms and conditions.</label>
+            </div>
+
+            <div class="mt-4 form-check form-switch ">
+                <input type="checkbox" name="promo" id="promo" class="form-check-input ">
+                <label class="form-check-label " for="promo"> Opt for promotional emails</label>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function showvalue(val) {
+            $('#rangevalue').html('Your selected value is: ' + val);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
