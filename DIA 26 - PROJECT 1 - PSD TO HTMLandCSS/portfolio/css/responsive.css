@@ -1,0 +1,12 @@
+@media screen and (max-width: 991px) {
+    li.nav-item {
+        margin: 15px 0;
+        display: block;
+        text-align: center;
+
+    }
+
+    .navbar-nav-bg {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
